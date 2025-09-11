@@ -1,0 +1,15 @@
+
+* {outline: 1px solid red !important;}
+
+#home{
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  height: auto;
+
+  border: 5px solid red;
+}
+#game{}
+
+.box1, .box2, .box3{
+}
