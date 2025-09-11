@@ -35,7 +35,7 @@ body {
 }
 
 #game {
-  display: grid;
+  display: none;
   grid-template-columns: auto;
   grid-template-rows: 60px auto 250px;
   height: 100vh;
@@ -108,7 +108,7 @@ h2 {
 
 p {
   font-size: 16px;
-  font-type: "Poppins";
+  font-family: "Poppins";
   color: darkgray
 }
 
