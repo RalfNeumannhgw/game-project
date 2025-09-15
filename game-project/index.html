@@ -16,36 +16,86 @@
       <img id="img-background1" src="./src/images/schnick_background1.png">
     </div>
     <div class="box2">
-      <h2>Spielanleitung:</h2>
-      <p>Eine durch die Serie "The Big Bang Theory" bekannt gewordene Variante davon ist Stein–Papier–Schere–Echse–Spock
-        (engl. Rock–Paper–Scissors–Lizard–Spock), bei der anstatt Streichholz und Brunnen Echse und Mr. Spock eingesetzt
-        werden: Stein zerquetscht Echse, Echse vergiftet Spock, Spock zertrümmert Schere, Schere köpft Echse, Echse
-        frisst Papier, Papier widerlegt Spock und Spock verdampft Stein. Diese Variante wurde vom Amerikaner Sam Kass
-        zusammen mit Karen Bryla erfunden</p>
+      <article id="intro">
+        <div class="box-intro">
+          <h2>Einführung in Stein–Papier–Echse-Schere–Spock (SPESS)</h2>
+          <p>
+            „Stein–Papier–Schere–Echse–Spock“ ist eine erweiterte Variante des klassischen
+            Spiels Schnick-Schnack-Schnuck. Sie wurde von Sam Kass und Karen Bryla erfunden
+            und durch die Serie <em>The Big Bang Theory</em> weltweit bekannt.
+          </p>
+          <p>
+            Im Gegensatz zur ursprünglichen Version mit nur drei Gesten gibt es hier fünf:
+            <strong>Stein, Papier, Schere, Echse</strong> und <strong>Spock</strong>.
+            Dadurch entstehen weniger Unentschieden und mehr spannende Spielzüge.
+          </p>
+
+          <h3>Spielregeln:</h3>
+          <p>Der Spieler spielt gegen den Computer und wählt dafür eines der 5 Gesten. Anhand dieser Bedingungen wird
+            der Sieger des Versuchs wie folgt ermittelt:</p>
+          <ul>
+            <li><strong>Stein</strong> macht die Schere stumpf und zerquetscht die Echse</li>
+            <li><strong>Schere</strong> schneidet Papier und köpft die Echse</li>
+            <li><strong>Papier</strong> bedeckt Stein und widerlegt Spock</li>
+            <li><strong>Echse</strong> frisst Papier und vergiftet Spock</li>
+            <li><strong>Spock</strong> zertrümmert Schere und verdampft Stein</li>
+          </ul>
+
+          <ul>
+            <li>Treffen beide Spieler dieselbe Geste, endet der Versuch unentschieden.</li>
+            <li><strong>Game:</strong> Wer zuerst zwei Siege in den Versuchen erzielt, gewinnt ein Game.</li>
+            <li><strong>Match:</strong> Wer als Erster zwei Games gewinnt, entscheidet ein Match für sich.</li>
+            <li><strong>Turnier:</strong> Wer zuerst zwei Matches gewinnt, wird Gesamtsieger des Turniers.</li>
+          </ul>
+        </div>
+      </article>
+
     </div>
     <div class="box3">
       <button id="btn-start">START</button>
     </div>
   </section>
 
-
+  <!-- #########  Second Page ######## -->
   <section id="game">
     <div class="box4">
-      <p>Game Spieler: 0</p>
-      <p>Computer: 0</p>
+      <p>👤 Spieler: <span id="userCounter">0</span></p>
+      <p>Match</p>
+      <p>💻 Computer: <span id="compCounter">0</span></p>
     </div>
+
     <div class="box5">
-      <img id="img-background2" src="./src/images/schnick_background2.png">
-      <p>Stein fällt in den Brunnen.</p>
+      <img id="img-background2" src="./src/images/schnick_background2.png" alt="Game Arena">
+
+      <div id="infobox">
+        <p id="info">⚡ Wähle deine Geste aus ...</p>
+        <p id="resultInfo"></p>
+      </div>
     </div>
 
     <div class="box6">
-      <div id="symbol1" class="box-symbol"><img src="./src/images/stein.png" alt=""><span>Stein</span></div>
-      <div id="symbol2" class="box-symbol"><img src="./src/images/schere.png" alt=""><span>Schere</span></div>
-      <div id="symbol3" class="box-symbol"><img src="./src/images/papier.png" alt=""><span>Papier</span></div>
-      <div id="symbol4" class="box-symbol"><img src="./src/images/spock.png" alt=""><span>Spock</span></div>
-      <div id="symbol5" class="box-symbol"><img src="./src/images/echse.png" alt=""><span>Echse</span></div>
+      <div id="symbol1" class="box-symbol">
+        <img src="./src/images/stein.png" alt="Stein">
+        <span>Stein</span>
+      </div>
+      <div id="symbol2" class="box-symbol">
+        <img src="./src/images/schere.png" alt="Schere">
+        <span>Schere</span>
+      </div>
+      <div id="symbol3" class="box-symbol">
+        <img src="./src/images/papier.png" alt="Papier">
+        <span>Papier</span>
+      </div>
+      <div id="symbol4" class="box-symbol">
+        <img src="./src/images/spock.png" alt="Spock">
+        <span>Spock</span>
+      </div>
+      <div id="symbol5" class="box-symbol">
+        <img src="./src/images/echse.png" alt="Echse">
+        <span>Echse</span>
+      </div>
     </div>
   </section>
 </body>
+
 </html>
