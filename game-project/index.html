@@ -3,8 +3,9 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="icon" type="image/svg+xml" href="/spess-icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preload" href="src/css/style.css" as="style" onload="this.rel='stylesheet'">
   <script type="module" src="./src/js/main.ts"></script>
   <title>SPESS</title>
 </head>
@@ -42,7 +43,7 @@
           </ul>
 
           <ul>
-            <li>Treffen beide Spieler dieselbe Geste, endet der Versuch unentschieden.</li>
+            <li>Treffen beide Spieler dieselbe Geste, endet der Versuch mit unentschieden.</li>
             <li><strong>Game:</strong> Wer zuerst zwei Siege in den Versuchen erzielt, gewinnt ein Game.</li>
             <li><strong>Match:</strong> Wer als Erster zwei Games gewinnt, entscheidet ein Match für sich.</li>
             <li><strong>Turnier:</strong> Wer zuerst zwei Matches gewinnt, wird Gesamtsieger des Turniers.</li>
@@ -59,16 +60,19 @@
   <!-- #########  Second Page ######## -->
   <section id="game">
     <div class="box4">
-      <p>👤 Spieler: <span id="userCounter">0</span></p>
-      <p>Match</p>
-      <p>💻 Computer: <span id="compCounter">0</span></p>
+      <p>👤 Spieler: <span id="userCounter">0 / 0</span></p>
+      <p>Game / Match</p>
+      <p>💻 Computer: <span id="compCounter">0 / 0</span></p>
     </div>
 
     <div class="box5">
-      <img id="img-background2" src="./src/images/schnick_background2.png" alt="Game Arena">
-
+      <div id="img-info">
+      <img id="img-schnick" src="./src/images/schnick_background2.png" alt="Game Arena">
+      <img id="img-computer" src="./src/images/computer.png" alt="Image Computer">
+      <img id="img-gamer" src="./src/images/gamer.png" alt="Image Gamer">
+      </div>
       <div id="infobox">
-        <p id="info">⚡ Wähle deine Geste aus ...</p>
+        <p id="info">⚡ Wähle eines der Gesten aus ...</p>
         <p id="resultInfo"></p>
       </div>
     </div>

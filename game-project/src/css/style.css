@@ -24,10 +24,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  /*   min-width: 360px; */
   background-color: #282829;
   border: 4px solid darkgray;
   width: 100%;
+  min-height: 100vh;
   box-sizing: border-box;
 }
 
@@ -60,13 +60,6 @@ li {
   color: darkgray
 }
 
-#home {
-  display: grid;
-  grid-template-columns: 100vw;
-  grid-template-rows: auto auto px;
-  height: 100%;
-}
-
 @media (max-width: 1200px) {
   .box1 {
     height: 300px;
@@ -83,6 +76,16 @@ li {
   .box1 {
     height: 220px;
   }
+
+
+
+  .gesture-grid {
+    gap: 15px;
+  }
+
+  .box-symbol img {
+    width: 60px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -95,30 +98,29 @@ li {
   .box1 {
     height: 200px;
   }
+  .box4 {
+    gap: 5px;
+  }
+
+  .box4 p {
+    font-size: 13px;
+  }
+
+  #info {
+    font-size: 16px;
+  }
+
+  .box-symbol span {
+    font-size: 14px;
+  }
 }
 
-#btn-start {
-  width: 15vw;
-  height: 4vh;
-  border: none;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #5e5e5e, #1c1c1c);
-  color: #f2f2f2;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  transition: transform 0.2s ease, background 0.3s ease;
-}
-
-#btn-start:hover {
-  transform: scale(1.05);
-  background: linear-gradient(135deg, #7a7a7a, #2e2e2e);
-}
-
-#img-background1 {
-  aspect-ratio: 1/1;
-  width: 20vw;
+/* ################  Page One ############## */
+#home {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: auto auto auto;
+  height: 100%;
 }
 
 .box1,
@@ -132,7 +134,6 @@ li {
 
 .box1,
 .box2 {
-  /*   margin-bottom: 20px; */
   border-bottom: 4px solid darkgray;
 }
 
@@ -144,6 +145,13 @@ li {
   padding: 20px 0px 20px 0px;
 }
 
+/* ################  Box1 ############## */
+#img-background1 {
+  aspect-ratio: 1/1;
+  width: 20vw;
+}
+
+/* ################  Box2 ############## */
 #intro {
   padding: 20px;
   margin: 20px auto;
@@ -170,13 +178,33 @@ li {
   padding-left: 20px;
 }
 
-/* ############   Second Page #################### */
+/* ################  Box3 ############## */
+#btn-start {
+  width: 15vw;
+  height: 4vh;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #5e5e5e, #1c1c1c);
+  color: #f2f2f2;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+#btn-start:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #7a7a7a, #2e2e2e);
+}
+
+/* ################  Page Two ############## */
 
 #game {
   display: none;
   grid-template-columns: auto;
-  grid-template-rows: 80px auto 300px;
-  height: 100vh;
+  grid-template-rows: 30px auto auto;
+  min-height: 100vh;
   background: radial-gradient(circle at center, #1c1c1e, #0e0e0f);
   color: #f2f2f2;
 }
@@ -185,10 +213,11 @@ li {
 .box4 {
   display: flex;
   justify-content: space-around;
+  flex-direction: row;
   align-items: center;
   background: #222;
   border-bottom: 2px solid #444;
-  padding: 10px;
+  padding: 20px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
 }
 
@@ -196,7 +225,6 @@ li {
   margin: 0;
   color: #00e6e6;
   text-shadow: 0 0 8px #00e6e6;
-  font-size: 1.2em;
   font-weight: bold;
 }
 
@@ -210,11 +238,26 @@ li {
   border-bottom: 2px solid #444;
 }
 
-#img-background2 {
+#img-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50vw;
   max-width: 500px;
+  min-height: 200px;
+  margin: 0 auto;
+  position: relative;
   border-radius: 16px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.8);
+  background: #2a2a2c;
+  border: 2px solid #444;
+}
+
+#img-info img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover !important;
+  border-radius: inherit; /* gleiche Rundung wie #img-info */
 }
 
 #info {
@@ -233,17 +276,29 @@ li {
 }
 
 #infobox {
+  display: flex;
+  flex-direction: column;
   background: #2a2a2c;
   border: 2px solid #444;
   border-radius: 16px;
-  padding: 12px;
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-    width: 50vw;
+  width: 50vw;
   max-width: 500px;
   margin-top: 15px;
+}
+
+
+
+
+#img-computer {
+  display: none;
+}
+
+#img-gamer {
+ display:none;
 }
 
 /* ######### Box 6 ######### */
@@ -253,11 +308,11 @@ li {
   gap: 20px;
   padding: 20px;
   justify-items: center;
+  flex-grow: 1;
 }
 
 .box-symbol {
   background: #2a2a2c;
- /*  height: 145px; */
   border: 2px solid #444;
   border-radius: 16px;
   padding: 12px;
@@ -270,7 +325,6 @@ li {
 .box-symbol img {
   aspect-ratio: 1/1;
   width: 80px;
-  /* max-width: 100%; */
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.2));
   transition: transform 0.3s ease, filter 0.3s ease;
 }
@@ -292,35 +346,4 @@ li {
 .box-symbol:hover img {
   transform: scale(1.1);
   filter: drop-shadow(0 0 10px #00e6e6);
-}
-
-/* Mobile Anpassungen */
-@media (max-width: 768px) {
-  #img-background2 {
-    width: 70vw;
-  }
-
-  .gesture-grid {
-    gap: 15px;
-  }
-
-  .box-symbol img {
-    width: 60px;
-  }
-}
-
-@media (max-width: 480px) {
-  .box4 {
-    flex-direction: column;
-    gap: 5px;
-    font-size: 16px;
-  }
-
-  #info {
-    font-size: 16px;
-  }
-
-  .box-symbol span {
-    font-size: 14px;
-  }
 }
