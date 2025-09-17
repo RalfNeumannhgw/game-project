@@ -8,7 +8,7 @@ const imgGamer = document.getElementById("img-gamer");
 if (imgGamer) {
     imgGamer.style.display = "none";
 }
-const imgSchnick = document.getElementById("img-schnick");
+const imgSchnick = document.getElementById("img-persons");
 if (imgSchnick) {
     imgSchnick.style.display = "block";
 }
@@ -92,7 +92,7 @@ function finalResult() {
         if (imgGamer) {
             imgGamer.style.display = "none";
         }
-        const imgSchnick = document.getElementById("img-schnick");
+        const imgSchnick = document.getElementById("img-persons");
         if (imgSchnick) {
             imgSchnick.style.display = "block";
         }
@@ -152,7 +152,7 @@ function changeCounter(object: Counter): Counter {
         if (imgGamer) {
             imgGamer.style.display = "block";
         }
-        const imgSchnick = document.getElementById("img-schnick");
+        const imgSchnick = document.getElementById("img-persons");
         if (imgSchnick) {
             imgSchnick.style.display = "none";
         }
@@ -193,7 +193,7 @@ function changeCounter(object: Counter): Counter {
         if (imgGamer) {
             imgGamer.style.display = "none";
         }
-        const imgSchnick = document.getElementById("img-schnick");
+        const imgSchnick = document.getElementById("img-persons");
         if (imgSchnick) {
             imgSchnick.style.display = "none";
         }
@@ -278,7 +278,7 @@ function handleChoice(choiceValue: number) {
         if (imgGamer) {
             imgGamer.style.display = "none";
         }
-        const imgSchnick = document.getElementById("img-schnick");
+        const imgSchnick = document.getElementById("img-persons");
         if (imgSchnick) {
             imgSchnick.style.display = "block";
         }
