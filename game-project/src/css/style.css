@@ -255,6 +255,17 @@ p, li, .box-symbol span { color: darkgray; font-family: 'Poppins'; font-size: 0.
   filter: drop-shadow(0 0 10px #00e6e6);
 }
 
+.box-symbol.active-comp {
+  transform: translateY(-6px);
+  border-color: #b67070;
+  box-shadow: 0 6px 16px rgba(209, 26, 32, 0.4);
+}
+
+.box-symbol.active-comp img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px #b67070);
+}
+
 /* ######################### Responsive ######################### */
 @media (max-width: 992px) {
   .box1 { height: 300px; }

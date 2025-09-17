@@ -1,5 +1,3 @@
-/* import '../css/style.css'; */
-
 const imgComputer = document.getElementById("img-computer");
 if (imgComputer) {
     imgComputer.style.display = "none";
@@ -13,6 +11,15 @@ if (imgSchnick) {
     imgSchnick.style.display = "block";
 }
 
+function triggerHoverEffect(symbolId) {
+  const symbol = document.getElementById(symbolId);
+  if (symbol) {
+    symbol.classList.add('active-comp');
+    setTimeout(() => {
+      symbol.classList.remove('active-comp');
+    }, 2000);
+  }
+}
 
 function setText(selector: string, text: string) {
     const el = document.querySelector(selector);
@@ -266,6 +273,7 @@ function createInfo(choice: number, randomNum: number) {
 function handleChoice(choiceValue: number) {
     if (!isGameActive) return;
     choice = choiceValue;
+    triggerHoverEffect('symbol' + randomNum);
     if (choice === randomNum) {
         console.log("Unentschieden !!!");
         setText("#info", "Unentschieden");
