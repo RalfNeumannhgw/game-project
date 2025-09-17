@@ -1,5 +1,19 @@
 /* import '../css/style.css'; */
 
+const imgComputer = document.getElementById("img-computer");
+if (imgComputer) {
+    imgComputer.style.display = "none";
+}
+const imgGamer = document.getElementById("img-gamer");
+if (imgGamer) {
+    imgGamer.style.display = "none";
+}
+const imgSchnick = document.getElementById("img-schnick");
+if (imgSchnick) {
+    imgSchnick.style.display = "block";
+}
+
+
 function setText(selector: string, text: string) {
     const el = document.querySelector(selector);
     if (el) el.textContent = text;

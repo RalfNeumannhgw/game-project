@@ -1,9 +1,14 @@
 /* * {outline: 1px solid red !important;} */
 
-html {
+/* ######################### Grundlegendes Reset ######################### */
+html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #282829;
+  width: 100%;
+  min-height: 100vh;
 }
 
 *,
@@ -12,110 +17,21 @@ html {
   box-sizing: inherit;
 }
 
+/* ######################### Fonts ######################### */
 @font-face {
   font-family: 'Poppins';
   src: url('../fonts/Poppins-Regular.woff2') format('woff2'),
-    url('../fonts/Poppins-Regular.woff') format('woff');
+       url('../fonts/Poppins-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #282829;
-  border: 4px solid darkgray;
-  width: 100%;
-  min-height: 100vh;
-  box-sizing: border-box;
-}
+/* ######################### Überschriften & Text ######################### */
+h1 { color: darkgray; font-size: 1.3em; }
+h2, h3 { color: darkgray; font-family: 'Poppins'; }
+p, li, .box-symbol span { color: darkgray; font-family: 'Poppins'; font-size: 0.8em; }
 
-h1 {
-  color: darkgray;
-  font-size: 1.3em;
-}
-
-h2 {
-  font-size: 1em;
-  font-family: "Poppins";
-  color: darkgray;
-}
-
-h3 {
-  font-size: 0.9em;
-  font-family: "Poppins";
-  color: darkgray;
-}
-
-p {
-  font-size: 0.8em;
-  font-family: "Poppins";
-  color: darkgray
-}
-
-li {
-  font-size: 0.8em;
-  font-family: "Poppins";
-  color: darkgray
-}
-
-@media (max-width: 1200px) {
-  .box1 {
-    height: 300px;
-  }
-}
-
-@media (max-width: 992px) {
-  .box1 {
-    height: 300px;
-  }
-}
-
-@media (max-width: 768px) {
-  .box1 {
-    height: 220px;
-  }
-
-
-
-  .gesture-grid {
-    gap: 15px;
-  }
-
-  .box-symbol img {
-    width: 60px;
-  }
-}
-
-@media (max-width: 600px) {
-  .box1 {
-    height: 200px;
-  }
-}
-
-@media (max-width: 480px) {
-  .box1 {
-    height: 200px;
-  }
-  .box4 {
-    gap: 5px;
-  }
-
-  .box4 p {
-    font-size: 13px;
-  }
-
-  #info {
-    font-size: 16px;
-  }
-
-  .box-symbol span {
-    font-size: 14px;
-  }
-}
-
-/* ################  Page One ############## */
+/* ######################### Page One ######################### */
 #home {
   display: grid;
   grid-template-columns: 100vw;
@@ -123,35 +39,30 @@ li {
   height: 100%;
 }
 
-.box1,
-.box2,
-.box3 {
+/* Box1 - Header & Bild */
+.box1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.box1,
-.box2 {
   border-bottom: 4px solid darkgray;
 }
 
+#img-background1 {
+  width: 20vw;
+  aspect-ratio: 1/1;
+}
+
+/* Box2 - Einführung */
 .box2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 4px solid darkgray;
   padding: 0px 20px 0px 0px;
 }
 
-.box3 {
-  padding: 20px 0px 20px 0px;
-}
-
-/* ################  Box1 ############## */
-#img-background1 {
-  aspect-ratio: 1/1;
-  width: 20vw;
-}
-
-/* ################  Box2 ############## */
 #intro {
   padding: 20px;
   margin: 20px auto;
@@ -167,8 +78,7 @@ li {
   color: #ddd;
 }
 
-.box-intro h2,
-.box-intro h3 {
+.box-intro h2, .box-intro h3 {
   color: darkgray;
   margin-top: 10px;
 }
@@ -178,7 +88,15 @@ li {
   padding-left: 20px;
 }
 
-/* ################  Box3 ############## */
+/* Box3 - Startbutton */
+.box3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+}
+
 #btn-start {
   width: 15vw;
   height: 4vh;
@@ -198,8 +116,7 @@ li {
   background: linear-gradient(135deg, #7a7a7a, #2e2e2e);
 }
 
-/* ################  Page Two ############## */
-
+/* ######################### Page Two ######################### */
 #game {
   display: none;
   grid-template-columns: auto;
@@ -209,7 +126,7 @@ li {
   color: #f2f2f2;
 }
 
-/* ######### Box 4 ######### */
+/* Box4 - Spielstände */
 .box4 {
   display: flex;
   justify-content: space-around;
@@ -228,7 +145,7 @@ li {
   font-weight: bold;
 }
 
-/* ######### Box 5 ######### */
+/* Box5 - Bild & Infobox */
 .box5 {
   display: flex;
   flex-direction: column;
@@ -238,30 +155,47 @@ li {
   border-bottom: 2px solid #444;
 }
 
+/* ######### Bildbereich responsive ######### */
 #img-info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50vw;
+  width: 80%;
   max-width: 500px;
-  min-height: 200px;
+  aspect-ratio: 16/9;
   margin: 0 auto;
   position: relative;
   border-radius: 16px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.8);
   background: #2a2a2c;
   border: 2px solid #444;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #img-info img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover !important;
-  border-radius: inherit; /* gleiche Rundung wie #img-info */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Infobox unter dem Bild */
+#infobox {
+  width: 80%;
+  max-width: 500px;
+  margin: 15px auto 0 auto;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: #2a2a2c;
+  border: 2px solid #444;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
 
 #info {
-  font-size: 20px;
+  font-size: 1.2rem;
   margin-top: 10px;
   color: #00e6e6;
   font-weight: bold;
@@ -270,45 +204,18 @@ li {
 
 #resultInfo {
   margin-top: 8px;
-  font-size: 18px;
+  font-size: 1rem;
   color: #fff;
   text-shadow: 0 0 8px #ff3366;
 }
 
-#infobox {
-  display: flex;
-  flex-direction: column;
-  background: #2a2a2c;
-  border: 2px solid #444;
-  border-radius: 16px;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-  width: 50vw;
-  max-width: 500px;
-  margin-top: 15px;
-}
-
-
-
-
-#img-computer {
-  display: none;
-}
-
-#img-gamer {
- display:none;
-}
-
-/* ######### Box 6 ######### */
+/* Box6 - Gesten Auswahl */
 .box6 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 15px;
   padding: 20px;
   justify-items: center;
-  flex-grow: 1;
 }
 
 .box-symbol {
@@ -323,8 +230,8 @@ li {
 }
 
 .box-symbol img {
+  width: 60px;
   aspect-ratio: 1/1;
-  width: 80px;
   filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.2));
   transition: transform 0.3s ease, filter 0.3s ease;
 }
@@ -332,7 +239,7 @@ li {
 .box-symbol span {
   display: block;
   margin-top: 8px;
-  font-size: 16px;
+  font-size: 0.9rem;
   font-weight: bold;
   color: #ddd;
 }
@@ -346,4 +253,36 @@ li {
 .box-symbol:hover img {
   transform: scale(1.1);
   filter: drop-shadow(0 0 10px #00e6e6);
+}
+
+/* ######################### Responsive ######################### */
+@media (max-width: 992px) {
+  .box1 { height: 300px; }
+}
+
+@media (max-width: 768px) {
+  .box1 { height: 220px; }
+  .gesture-grid { gap: 15px; }
+  .box-symbol img { width: 50px; }
+}
+
+@media (max-width: 600px) {
+  .box1 { height: 200px; }
+}
+
+@media (max-width: 480px) {
+  .box1 { height: 200px; }
+  .box4 { gap: 5px; }
+  .box4 p { font-size: 13px; }
+  #info { font-size: 16px; }
+  .box-symbol img { width: 40px; }
+  .box-symbol span { font-size: 0.75rem; }
+
+  /* #img-info für kleine Bildschirme quadratisch */
+  #img-info {
+    width: 95%;
+    aspect-ratio: 1/1;
+  }
+
+  #infobox { width: 95%; }
 }
